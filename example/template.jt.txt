@@ -1,0 +1,7 @@
+Hello {{ name }},
+How are you?
+
+I want to start a party.
+These are the guests:
+{{loop guests}}- {{name}}
+{{end}}

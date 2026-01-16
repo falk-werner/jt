@@ -1,0 +1,7 @@
+{
+    "name": "Bob",
+    "guests": [
+        {"name": "Alice"},
+        {"name": "Charly"}
+    ]
+}
