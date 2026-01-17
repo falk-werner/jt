@@ -42,5 +42,6 @@ add_executable(alltests
 
 target_link_libraries(alltests PRIVATE jt GTest::gtest GTest::gtest_main)
 target_include_directories(alltests PRIVATE src)
+gtest_discover_tests(alltests)
 
 endif()
