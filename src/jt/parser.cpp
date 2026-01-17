@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Falk Werner <github.com/falk-werner>
+// SPDX-License-Identifier: MIT
+
 #include "jt/parser.hpp"
 #include "jt/template_builder.hpp"
 #include "jt/trim.hpp"

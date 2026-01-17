@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Falk Werner <github.com/falk-werner>
+// SPDX-License-Identifier: MIT
+
 #include "jt/template_builder.hpp"
 
 namespace jt

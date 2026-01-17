@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Falk Werner <github.com/falk-werner>
+// SPDX-License-Identifier: MIT
+
 #ifndef JT_TEMPLATE_I_HPP
 #define JT_TEMPLATE_I_HPP
 
