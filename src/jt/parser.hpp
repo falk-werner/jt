@@ -11,6 +11,10 @@
 namespace jt
 {
 
+/// @brief Parses a template from it's string represenation.
+/// @param text String representation of the template.
+/// @return Template.
+/// @throws On parsing errors.
 std::unique_ptr<template_i> parse(std::string const & text);
 
 }

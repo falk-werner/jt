@@ -15,12 +15,21 @@
 namespace jt
 {
 
+/// @brief Template.
 class jtemplate: public template_i
 {
 public:
+    /// @brief Create a new template instance from an instruction.
+    /// @param instruction Instruction of the template.
     jtemplate(std::shared_ptr<instruction> instruction);
+
     ~jtemplate() override = default;
-    void render_to(nlohmann::json const & context, std::ostream & out) const;
+
+    /// @brief Renders the template based on the provided data to stream.
+    /// @param data JSON data used to render the template,
+    /// @param out Stream to render the template.
+    /// @throws On rendering errors.
+    void render_to(nlohmann::json const & data, std::ostream & out) const;
 private:
     std::shared_ptr<instruction> _instruction;
 };
