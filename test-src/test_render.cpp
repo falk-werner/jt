@@ -81,3 +81,14 @@ TEST(render, fail_invalid_path)
         jt::render(templ, data);
     });
 }
+
+TEST(render, fail_unfinished_instruction)
+{
+   std::string const templ = "{{ unfinished ";
+    auto data = json::parse(R"({"unfinished": "true"})");
+
+    ASSERT_ANY_THROW({
+        jt::render(templ, data);
+    });
+
+}

@@ -5,12 +5,18 @@
 #include "jt/parser.hpp"
 #include <fstream>
 #include <sstream>
+#include <stdexcept>
+#include <filesystem>
 
 namespace jt
 {
 
 std::unique_ptr<template_i> from_file(std::string const & filename)
 {
+    if (!std::filesystem::is_regular_file(filename)) {
+        throw std::runtime_error("file not found");
+    }
+
     std::ifstream template_file(filename);
     std::stringstream content;
     content << template_file.rdbuf();

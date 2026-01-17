@@ -49,6 +49,8 @@ find_package(GTest REQUIRED)
 include(GoogleTest)
 
 add_executable(alltests
+    test-src/tempfile.cpp
+    test-src/test_from_file.cpp
     test-src/test_trim.cpp
     test-src/test_parse_path.cpp
     test-src/test_render.cpp
