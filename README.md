@@ -1,3 +1,5 @@
+[![Build](https://github.com/falk-werner/jt/actions/workflows/build.yaml/badge.svg)](https://github.com/falk-werner/jt/actions/workflows/build.yaml)
+
 # jt
 
 Template engine working with json data.
