@@ -159,6 +159,28 @@ jt -t TEMPLATE -d DATA
 | TEMPLATE | path | Path of the template file. |
 | DATA     | path | Path of the data file (json). |
 
+## Build
+
+```bash
+cmake -B build
+cmake --build build
+cmake --build build --target test
+sudo cmake --install build
+```
+
+### CMake Options
+
+| Option | Description |
+| ------ | ----------- |
+| WITHOUT_TEST | Disable generation of unit tests |
+| WITH_COVERAGE | Enable coverage |
+| INSTALL_LIB | Install libjt and headers |
+
+### Generate Coverage
+
+```bash
+./generate_coverage.sh
+```
 
 ## Dependencies
 

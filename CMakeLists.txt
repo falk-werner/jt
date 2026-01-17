@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.28)
 project(cpptemplate)
 
 option(WITHOUT_TEST "Disable unit test" OFF)
-option(WITH_COVERAGE "Enable coverage for debug configuration" OFF)
+option(WITH_COVERAGE "Enable coverage" OFF)
+option(INSTALL_LIB "Install static library and headers" OFF)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -23,6 +24,11 @@ add_library(jt STATIC
 target_include_directories(jt PUBLIC inc)
 target_include_directories(jt PRIVATE src)
 
+if(INSTALL_LIB)
+install(TARGETS jt)
+install(DIRECTORY inc/jt TYPE INCLUDE)
+endif()
+
 if(WITH_COVERAGE)
 target_compile_options(jt PUBLIC -coverage)
 target_link_options(jt PUBLIC -coverage)
@@ -32,6 +38,7 @@ endif()
 add_executable(app src/app/main.cpp)
 set_target_properties(app PROPERTIES OUTPUT_NAME jt)
 target_link_libraries(app jt)
+install(TARGETS app)
 
 if(NOT(WITHOUT_TEST))
 
